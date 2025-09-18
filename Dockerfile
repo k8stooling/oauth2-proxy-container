@@ -33,3 +33,5 @@ COPY --from=builder /usr/local/bin/oauth2-proxy /usr/local/bin/oauth2-proxy
 # Distroless images do not have useradd/groupadd, so we specify numeric IDs.
 # This aligns with the original intent of running as a non-root 'kubectl' user.
 USER 1000:1000
+
+CMD ['/usr/local/bin/oauth2-proxy']
